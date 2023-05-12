@@ -62,7 +62,7 @@ namespace ООО__ЭКО_Сити_
 
         private void reset_password_Click(object sender, EventArgs e)
         {
-            string sql_update = $"UPDATE [users] SET pssword = '{new_password.Text}' WHERE password = '{now_password.Text}'";
+            string sql_update = $"UPDATE [Users] SET pssword = '{new_password.Text}' WHERE password = '{now_password.Text}'";
             if(new_password.Text == new_password_confiurm.Text)
             {
                 OleDbCommand command = new OleDbCommand(sql_update, myConnection);

@@ -37,7 +37,6 @@ namespace ООО__ЭКО_Сити_
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.fiz_tab_face = new System.Windows.Forms.TabPage();
-            this.btnViewFiz = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.contract_info = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,17 +51,22 @@ namespace ООО__ЭКО_Сити_
             this.label6 = new System.Windows.Forms.Label();
             this.urid_lab = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.договорыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.физическийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.юридическийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.fiz_tab_face.SuspendLayout();
             this.urid_tab_face.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // logo
             // 
             this.logo.Cursor = System.Windows.Forms.Cursors.Default;
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(12, 12);
+            this.logo.Location = new System.Drawing.Point(0, 27);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(207, 68);
             this.logo.TabIndex = 0;
@@ -72,7 +76,7 @@ namespace ООО__ЭКО_Сити_
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(466, 9);
+            this.label1.Location = new System.Drawing.Point(466, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(435, 39);
             this.label1.TabIndex = 1;
@@ -82,7 +86,7 @@ namespace ООО__ЭКО_Сити_
             // 
             this.emailuser.AutoSize = true;
             this.emailuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.emailuser.Location = new System.Drawing.Point(668, 51);
+            this.emailuser.Location = new System.Drawing.Point(641, 63);
             this.emailuser.Name = "emailuser";
             this.emailuser.Size = new System.Drawing.Size(0, 29);
             this.emailuser.TabIndex = 2;
@@ -122,7 +126,6 @@ namespace ООО__ЭКО_Сити_
             // 
             // fiz_tab_face
             // 
-            this.fiz_tab_face.Controls.Add(this.btnViewFiz);
             this.fiz_tab_face.Controls.Add(this.label4);
             this.fiz_tab_face.Controls.Add(this.contract_info);
             this.fiz_tab_face.Controls.Add(this.label2);
@@ -131,22 +134,11 @@ namespace ООО__ЭКО_Сити_
             this.fiz_tab_face.Controls.Add(this.textBox_number_check);
             this.fiz_tab_face.Location = new System.Drawing.Point(4, 22);
             this.fiz_tab_face.Name = "fiz_tab_face";
-            this.fiz_tab_face.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.fiz_tab_face.Padding = new System.Windows.Forms.Padding(3);
             this.fiz_tab_face.Size = new System.Drawing.Size(819, 301);
             this.fiz_tab_face.TabIndex = 0;
             this.fiz_tab_face.Text = "Физическое личо";
             this.fiz_tab_face.UseVisualStyleBackColor = true;
-            // 
-            // btnViewFiz
-            // 
-            this.btnViewFiz.Location = new System.Drawing.Point(112, 146);
-            this.btnViewFiz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnViewFiz.Name = "btnViewFiz";
-            this.btnViewFiz.Size = new System.Drawing.Size(56, 19);
-            this.btnViewFiz.TabIndex = 6;
-            this.btnViewFiz.Text = "View";
-            this.btnViewFiz.UseVisualStyleBackColor = true;
-            this.btnViewFiz.Click += new System.EventHandler(this.btnViewFiz_Click);
             // 
             // label4
             // 
@@ -222,7 +214,7 @@ namespace ООО__ЭКО_Сити_
             this.urid_tab_face.Controls.Add(this.label3);
             this.urid_tab_face.Location = new System.Drawing.Point(4, 22);
             this.urid_tab_face.Name = "urid_tab_face";
-            this.urid_tab_face.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.urid_tab_face.Padding = new System.Windows.Forms.Padding(3);
             this.urid_tab_face.Size = new System.Drawing.Size(819, 301);
             this.urid_tab_face.TabIndex = 1;
             this.urid_tab_face.Text = "Юридическое лицр";
@@ -303,6 +295,39 @@ namespace ООО__ЭКО_Сити_
             this.label3.TabIndex = 0;
             this.label3.Text = "Ваши договоры";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.договорыToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(914, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // договорыToolStripMenuItem
+            // 
+            this.договорыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.физическийToolStripMenuItem,
+            this.юридическийToolStripMenuItem});
+            this.договорыToolStripMenuItem.Name = "договорыToolStripMenuItem";
+            this.договорыToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.договорыToolStripMenuItem.Text = "Договоры";
+            // 
+            // физическийToolStripMenuItem
+            // 
+            this.физическийToolStripMenuItem.Name = "физическийToolStripMenuItem";
+            this.физическийToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.физическийToolStripMenuItem.Text = "Физический";
+            this.физическийToolStripMenuItem.Click += new System.EventHandler(this.физическийToolStripMenuItem_Click);
+            // 
+            // юридическийToolStripMenuItem
+            // 
+            this.юридическийToolStripMenuItem.Name = "юридическийToolStripMenuItem";
+            this.юридическийToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.юридическийToolStripMenuItem.Text = "Юридический";
+            this.юридическийToolStripMenuItem.Click += new System.EventHandler(this.юридическийToolStripMenuItem_Click);
+            // 
             // Personal_account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,7 +340,9 @@ namespace ООО__ЭКО_Сити_
             this.Controls.Add(this.emailuser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logo);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Personal_account";
             this.Text = "Личный кабинет";
@@ -326,6 +353,8 @@ namespace ООО__ЭКО_Сити_
             this.fiz_tab_face.PerformLayout();
             this.urid_tab_face.ResumeLayout(false);
             this.urid_tab_face.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,6 +383,9 @@ namespace ООО__ЭКО_Сити_
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label urid_lab;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnViewFiz;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem договорыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem физическийToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem юридическийToolStripMenuItem;
     }
 }

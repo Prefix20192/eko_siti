@@ -85,12 +85,24 @@
     <Compile Include="about_the_activity.Designer.cs">
       <DependentUpon>about_the_activity.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataBank.cs" />
-    <Compile Include="Export_to_excel.cs">
+    <Compile Include="Ask_question.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Export_to_excel.Designer.cs">
-      <DependentUpon>Export_to_excel.cs</DependentUpon>
+    <Compile Include="Ask_question.Designer.cs">
+      <DependentUpon>Ask_question.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBank.cs" />
+    <Compile Include="Export_to_excel_fiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export_to_excel_fiz.Designer.cs">
+      <DependentUpon>Export_to_excel_fiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export_to_excel_urid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export_to_excel_urid.Designer.cs">
+      <DependentUpon>Export_to_excel_urid.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -139,8 +151,14 @@
     <EmbeddedResource Include="about_the_activity.resx">
       <DependentUpon>about_the_activity.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Export_to_excel.resx">
-      <DependentUpon>Export_to_excel.cs</DependentUpon>
+    <EmbeddedResource Include="Ask_question.resx">
+      <DependentUpon>Ask_question.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export_to_excel_fiz.resx">
+      <DependentUpon>Export_to_excel_fiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export_to_excel_urid.resx">
+      <DependentUpon>Export_to_excel_urid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -148,7 +148,7 @@ namespace ООО__ЭКО_Сити_
 
         private void item_about_program_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Программу сделал бла-бла\nВерсия: 1337\n");
+            MessageBox.Show("Программу сделал Сабельников Матвей Евгеньевич\nВерсия: 1.0\n");
         }
 
         private void button_contract_Click(object sender, EventArgs e)
@@ -158,7 +158,8 @@ namespace ООО__ЭКО_Сити_
 
         private void button_question_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://ecocity26.ru/potrebitelyam/zaklyuchit-dogovor/");
+            Ask_question ask = new Ask_question();
+            ask.Show();
         }
 
         private void item_all_news_Click(object sender, EventArgs e)

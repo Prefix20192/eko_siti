@@ -181,7 +181,6 @@ namespace ООО__ЭКО_Сити_
             this.MaximizeBox = false;
             this.Name = "reg_from";
             this.Text = "Форма регистрации";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.reg_from_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

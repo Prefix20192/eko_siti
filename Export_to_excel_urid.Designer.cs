@@ -1,7 +1,7 @@
 ﻿
 namespace ООО__ЭКО_Сити_
 {
-    partial class Export_to_excel
+    partial class Export_to_excel_urid
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,11 @@ namespace ООО__ЭКО_Сити_
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Export_to_excel));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Export_to_excel_urid));
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.export = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.face_contracts = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personal_account_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.number_contracts = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kpp = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,42 +45,36 @@ namespace ООО__ЭКО_Сити_
             // 
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
+            this.Id,
             this.face_contracts,
-            this.personal_account_number,
-            this.surname,
             this.number_contracts,
             this.inn,
             this.kpp,
             this.user_email});
-            this.dataGridView.Location = new System.Drawing.Point(-2, -1);
+            this.dataGridView.Location = new System.Drawing.Point(0, 0);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
-            this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(842, 545);
+            this.dataGridView.Size = new System.Drawing.Size(647, 418);
             this.dataGridView.TabIndex = 0;
             // 
-            // btnExport
+            // export
             // 
-            this.btnExport.Location = new System.Drawing.Point(12, 550);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(121, 31);
-            this.btnExport.TabIndex = 1;
-            this.btnExport.Text = "&Export Excel";
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.export.Location = new System.Drawing.Point(0, 424);
+            this.export.Name = "export";
+            this.export.Size = new System.Drawing.Size(92, 23);
+            this.export.TabIndex = 1;
+            this.export.Text = "&Export to Excel";
+            this.export.UseVisualStyleBackColor = true;
+            this.export.Click += new System.EventHandler(this.export_Click);
             // 
-            // id
+            // Id
             // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "Номер договора";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
+            this.Id.DataPropertyName = "id";
+            this.Id.HeaderText = "#";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
             // face_contracts
             // 
@@ -90,20 +82,6 @@ namespace ООО__ЭКО_Сити_
             this.face_contracts.HeaderText = "Тип договора";
             this.face_contracts.Name = "face_contracts";
             this.face_contracts.ReadOnly = true;
-            // 
-            // personal_account_number
-            // 
-            this.personal_account_number.DataPropertyName = "personal_account_number";
-            this.personal_account_number.HeaderText = "Лицевой счет";
-            this.personal_account_number.Name = "personal_account_number";
-            this.personal_account_number.ReadOnly = true;
-            // 
-            // surname
-            // 
-            this.surname.DataPropertyName = "surname";
-            this.surname.HeaderText = "Фамилия ";
-            this.surname.Name = "surname";
-            this.surname.ReadOnly = true;
             // 
             // number_contracts
             // 
@@ -133,19 +111,19 @@ namespace ООО__ЭКО_Сити_
             this.user_email.Name = "user_email";
             this.user_email.ReadOnly = true;
             // 
-            // Export_to_excel
+            // Export_to_excel_urid
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(841, 583);
-            this.Controls.Add(this.btnExport);
+            this.ClientSize = new System.Drawing.Size(647, 455);
+            this.Controls.Add(this.export);
             this.Controls.Add(this.dataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
-            this.Name = "Export_to_excel";
-            this.Text = "Экспорт данных в Excel";
-            this.Load += new System.EventHandler(this.Export_to_excel_Load);
+            this.Name = "Export_to_excel_urid";
+            this.Text = "Юридические договоры";
+            this.Load += new System.EventHandler(this.Export_to_excel_urid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
@@ -154,11 +132,9 @@ namespace ООО__ЭКО_Сити_
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.Button btnExport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.Button export;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn face_contracts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn personal_account_number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn number_contracts;
         private System.Windows.Forms.DataGridViewTextBoxColumn inn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kpp;

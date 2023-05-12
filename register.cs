@@ -26,10 +26,7 @@ namespace ООО__ЭКО_Сити_
             myConnection.Open();
         }
 
-        private void reg_from_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            myConnection.Close();
-        }
+
 
         private void email_Enter(object sender, EventArgs e)
         {
@@ -94,20 +91,27 @@ namespace ООО__ЭКО_Сити_
             
             if(password.Text == password_confiurm.Text)
             {
+
+                string query = "INSERT INTO Users VALUES ('" + email.Text + "', '" + password.Text + "')";
+
                 
-                OleDbCommand command = new OleDbCommand($"INSERT INTO [users] (email, password) VALUES (@email, @password)", myConnection);
+                OleDbCommand command = new OleDbCommand(query, myConnection);
 
-                command.Parameters.AddWithValue("email", email.Text);
-                command.Parameters.AddWithValue("password", password.Text);
+                if(command.ExecuteNonQuery() != 1)
+                {
+                    MessageBox.Show("Ошибка");
+                }
+                
 
-                command.ExecuteNonQuery();
-
+                myConnection.Close();
+                
                 MessageBox.Show("Вы успешно зарегистрировались!");
                 DataBank.email_user_text_personal_account = email.Text;
                 DataBank.password_text_personal_account = password.Text;
                 SingIn SingIng_form = new SingIn();
                 SingIng_form.Show();
                 this.Hide();
+                
                 
 
             }

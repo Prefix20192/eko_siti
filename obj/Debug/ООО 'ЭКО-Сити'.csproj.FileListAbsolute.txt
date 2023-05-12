@@ -18,7 +18,9 @@ C:\Users\Admin\Documents\project_vs\eko-siti\ООО 'ЭКО-Сити'\bin\Debug\
 C:\Users\Admin\Documents\project_vs\eko-siti\ООО 'ЭКО-Сити'\bin\Debug\ООО 'ЭКО-Сити'.application
 C:\Users\Admin\Documents\project_vs\eko-siti\ООО 'ЭКО-Сити'\obj\Debug\ООО 'ЭКО-Сити'.exe.manifest
 C:\Users\Admin\Documents\project_vs\eko-siti\ООО 'ЭКО-Сити'\obj\Debug\ООО 'ЭКО-Сити'.application
-C:\Users\Admin\Documents\project_vs\eko-siti\ООО 'ЭКО-Сити'\obj\Debug\ООО 'ЭКО-Сити'.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\project_vs\eko-siti\ООО 'ЭКО-Сити'\obj\Debug\Interop.ADODB.dll
 C:\Users\Admin\Documents\project_vs\eko-siti\ООО 'ЭКО-Сити'\obj\Debug\ООО 'ЭКО-Сити'.csproj.ResolveComReference.cache
-C:\Users\Admin\Documents\project_vs\eko-siti\ООО 'ЭКО-Сити'\obj\Debug\ООО__ЭКО_Сити_.Export_to_excel.resources
+C:\Users\Admin\Documents\project_vs\eko-siti\ООО 'ЭКО-Сити'\obj\Debug\ООО__ЭКО_Сити_.Export_to_excel_fiz.resources
+C:\Users\Admin\Documents\project_vs\eko-siti\ООО 'ЭКО-Сити'\obj\Debug\ООО__ЭКО_Сити_.Export_to_excel_urid.resources
+C:\Users\Admin\Documents\project_vs\eko-siti\ООО 'ЭКО-Сити'\obj\Debug\ООО__ЭКО_Сити_.Ask_question.resources
+C:\Users\Admin\Documents\project_vs\eko-siti\ООО 'ЭКО-Сити'\obj\Debug\ООО 'ЭКО-Сити'.csproj.AssemblyReference.cache

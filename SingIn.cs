@@ -78,7 +78,7 @@ namespace ООО__ЭКО_Сити_
         public void button_singin_Click(object sender, EventArgs e)
         {
             
-            string sql_select = $"SELECT email FROM users WHERE email = '{textBox1.Text}' AND password = '{textBox2.Text}'";
+            string sql_select = $"SELECT email FROM Users WHERE email = '{textBox1.Text}' AND password = '{textBox2.Text}'";
             OleDbCommand command = new OleDbCommand(sql_select, myConnection);
 
             OleDbDataReader reader = command.ExecuteReader();

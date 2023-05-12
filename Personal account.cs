@@ -32,24 +32,25 @@ namespace ООО__ЭКО_Сити_
         public void Personal_account_Load(object sender, EventArgs e)
         {
             emailuser.Text = DataBank.email_user_text_personal_account;
-            //SQL select fiz
+
             OleDbCommand comm = new OleDbCommand();
             comm.CommandText = @"SELECT COUNT(*) FROM Contracts WHERE user_email = '" + DataBank.email_user_text_personal_account + "'";
             comm.Connection = myConnection;
             int count = (int)comm.ExecuteScalar();
             if (count > 0) //проверяем
             {
+                urid_lab.Text = string.Empty;
                 contract_info.Text = string.Empty;
-                btnViewFiz.Visible = true;
+                urid_lab.Text = "Посмотреть список договорах можно в меню";
+                contract_info.Text = "Посмотреть список договорах можно в меню";
             }
             else
             {
-                btnViewFiz.Visible = false;
+                urid_lab.Text = "У вас нету договоров";
+                contract_info.Text = "У вас нету договоров";
             }
-            myConnection.Close();
-
         }
-
+        
         private void exit_account_Click(object sender, EventArgs e)
         {
             Main Main_form = new Main();
@@ -90,28 +91,20 @@ namespace ООО__ЭКО_Сити_
             }
             else
             {
-                if(textBox_number_check.Text.Length == 9)
-                {
-                    string face = "fiz";
+                OleDbCommand command = new OleDbCommand(
+                    $"INSERT INTO [Contracts] (face_contracts, personal_account_number, surname, user_email) VALUES (@face_contracts, @personal_account_number, @surname, @user_email)",
+                myConnection);
 
-                    OleDbCommand command = new OleDbCommand(
-                        $"INSERT INTO [Contracts] (face_contracts, personal_account_number, surname, user_email) VALUES (@face_contracts, @personal_account_number, @surname, @user_email)",
-                    myConnection);
+                command.Parameters.AddWithValue("face_contracts", "Физический");
+                command.Parameters.AddWithValue("personal_account_number", textBox_number_check.Text);
+                command.Parameters.AddWithValue("surname", textBox_surname.Text);
+                command.Parameters.AddWithValue("user_email", DataBank.email_user_text_personal_account);
 
-                    command.Parameters.AddWithValue("face_contracts", face);
-                    command.Parameters.AddWithValue("personal_account_number", textBox_number_check.Text);
-                    command.Parameters.AddWithValue("surname", textBox_surname.Text);
-                    command.Parameters.AddWithValue("user_email", DataBank.email_user_text_personal_account);
+                command.ExecuteNonQuery();
 
-                    command.ExecuteNonQuery();
 
-                    MessageBox.Show("Успешно!\nВы создали договор");
-                    Personal_account_Load(sender, e);
-                }
-                else
-                {
-                    MessageBox.Show("Произошла ошибка. Лицевой счет состоит из 9 знаков.");
-                }
+                MessageBox.Show("Успешно!\nВы создали договор");
+                Personal_account_Load(sender, e);
             }
         }
 
@@ -150,30 +143,43 @@ namespace ООО__ЭКО_Сити_
             }
             else
             {
-                string face = "urid";
 
                 OleDbCommand command = new OleDbCommand(
                     $"INSERT INTO [Contracts] (face_contracts, number_contracts, inn, kpp, user_email) VALUES (@face_contracts, @number_contracts, @inn, @kpp, @user_email)",
                 myConnection);
 
-                command.Parameters.AddWithValue("face_contracts", face);
+                command.Parameters.AddWithValue("face_contracts", "Юридический");
                 command.Parameters.AddWithValue("number_contracts", number_contracts__urid_face.Text);
                 command.Parameters.AddWithValue("inn", inn_urid_face.Text);
                 command.Parameters.AddWithValue("kpp", kpp_urid_face.Text);
                 command.Parameters.AddWithValue("user_email", DataBank.email_user_text_personal_account);
 
                 command.ExecuteNonQuery();
+                try
+                {
+                    MessageBox.Show("Успешно!\nВы создали договор");
+                }
+                catch (Exception ex)
+                {
 
-                MessageBox.Show("Успешно!\nВы создали договор");
-                Personal_account_Load(sender, e);
+                    MessageBox.Show("Ошибка: " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
-        private void btnViewFiz_Click(object sender, EventArgs e)
+
+        private void физическийToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Export_to_excel exportExcel = new Export_to_excel();
-            this.Hide();
-            exportExcel.Show();
+            Export_to_excel_fiz exportExcel_fiz = new Export_to_excel_fiz();
+            exportExcel_fiz.Show();
         }
+
+        private void юридическийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Export_to_excel_urid exportExcel_urid = new Export_to_excel_urid();
+            exportExcel_urid.Show();
+        }
+        
     }
 }

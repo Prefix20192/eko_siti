@@ -12,14 +12,14 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace ООО__ЭКО_Сити_
 {
-    public partial class Export_to_excel : Form
+    public partial class Export_to_excel_fiz : Form
     {
 
         //public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database.mdb;";
         public static string connectString = "Provider=Microsoft.jet.OLEDB.4.0;Data Source=Database.mdb;";
 
         private OleDbConnection myConnection;
-        public Export_to_excel()
+        public Export_to_excel_fiz()
         {
             InitializeComponent();
             myConnection = new OleDbConnection(connectString);
@@ -42,7 +42,7 @@ namespace ООО__ЭКО_Сити_
 
         public void Display()
         {
-            DisplayAndSearch("SELECT * FROM Contracts WHERE user_email = '"+ DataBank.email_user_text_personal_account + "'", dataGridView);
+            DisplayAndSearch("SELECT Id,face_contracts,personal_account_number,surname,user_email FROM Contracts WHERE user_email = '" + DataBank.email_user_text_personal_account + "' and face_contracts = 'Физический'", dataGridView);
         }
 
         private void Export_to_excel_Load(object sender, EventArgs e)
