@@ -14,7 +14,8 @@ namespace ООО__ЭКО_Сити_
 {
     public partial class reg_from : Form
     {
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database.mdb;";
+        //public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database.mdb;";
+        public static string connectString = "Provider=Microsoft.jet.OLEDB.4.0;Data Source=Database.mdb;";
 
         private OleDbConnection myConnection;
         public reg_from()
