@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ООО 'ЭКО-Сити'.exe" size="391648">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ООО 'ЭКО-Сити'.exe" size="466400">
       <assemblyIdentity name="ООО 'ЭКО-Сити'" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>R03ZW8PaQU/meHJgyfUcCtvCILZtQujowRwuLpcoGG4=</dsig:DigestValue>
+        <dsig:DigestValue>8fbBpR0VtnFJgDEI9eQdPYzy/W29iRwccIeK+JsNQ1E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -104,6 +104,12 @@
     <Compile Include="Export_to_excel_urid.Designer.cs">
       <DependentUpon>Export_to_excel_urid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forgot_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forgot_Password.Designer.cs">
+      <DependentUpon>Forgot_Password.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Export_to_excel_urid.resx">
       <DependentUpon>Export_to_excel_urid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forgot_Password.resx">
+      <DependentUpon>Forgot_Password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

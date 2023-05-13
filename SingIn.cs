@@ -107,9 +107,8 @@ namespace ООО__ЭКО_Сити_
 
         private void forgot_password_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Обратитесь в тех поддержку сайта");
-            System.Diagnostics.Process.Start("https://ecocity26.ru/");
-
+            Forgot_Password fpass = new Forgot_Password();
+            fpass.Show();
         }
     }
 }
